@@ -1,0 +1,75 @@
+// charactermaker1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	cout << "Welcome to Text-RPG 1.0" << endl;
+
+	bool k = false;
+	int numHitpoints = 0;
+	int numMagicpoints = 0;
+	string weaponName = "";
+	string className = "";
+	while (k == false)
+	{
+		cout << "Please select a character class number..." << endl;
+		cout << "1) Fighter 2) Wizard 3) Cleric 4) Thief : ";
+		int characterNum = 1;
+		cin >> characterNum;
+
+
+		if (characterNum == 1)
+		{
+			numHitpoints = 10;
+			numMagicpoints = 4;
+			weaponName = "Sword";
+			className = "Fighter";
+			k = true;
+		}
+		else if (characterNum == 2)
+		{
+			numHitpoints = 4;
+			numMagicpoints = 10;
+			weaponName = "Magic Staff";
+			className = "Wizard";
+			k = true;
+		}
+		else if (characterNum == 3)
+		{
+			numHitpoints = 7;
+			numMagicpoints = 7;
+			weaponName = "Magic Staff";
+			className = "Cleric";
+			k = true;
+		}
+		else if (characterNum == 4)
+		{
+			numHitpoints = 8;
+			numMagicpoints = 6;
+			weaponName = "Short Sword";
+			className = "Thief";
+			k = true;
+		}
+		else
+		{
+			cout << "Invaild class number! Pick again" << endl;
+
+		}
+	}
+
+	cout << endl;
+	cout << "Character properties:" << endl;
+	cout << "Class name = " << className << endl;
+	cout << "Hitpoints = " << numHitpoints << endl;
+	cout << "Magicpoints = " << numMagicpoints << endl;
+	cout << "Weapon	= " << weaponName << endl;
+
+	return 0;
+}
+
