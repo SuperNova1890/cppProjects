@@ -1,0 +1,50 @@
+// linearSearch1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+	int list1[17] = { 7, 3, 32, 2, 55, 34, 6, 13, 29, 22, 11, 9, 1, 5, 42, 39, 8 };
+	
+	for (int j = 0; j < 17; ++j)
+	{
+		if (j == 16)
+		{
+			cout << list1[j] << endl;
+		}
+		else
+		{
+			cout << list1[j] << ", ";
+		}
+			
+	}
+	
+	int value;
+	int position;
+	cout << "Enter an int from the list to search for: " << endl;
+	cin >> value;
+	
+	int i = 0;
+
+	while (i < 17)
+	{
+		if (list1[i] == value)
+		{
+			position = i;
+			cout << "Found at Position: " << position << endl;
+			break;
+		}
+		else
+		{
+			++i;
+		}
+	}
+
+    return 0;
+}
+
