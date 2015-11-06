@@ -1,0 +1,38 @@
+// AreaCircleFunc.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(time(0));
+
+	int r0 = rand();
+	int r1 = rand();
+	int r2 = rand();
+	int r3 = rand();
+	int r4 = rand();
+
+	cout << "r0 = " << r0 << endl;
+	cout << "r1 = " << r1 << endl;
+	cout << "r2 = " << r2 << endl;
+	cout << "r3 = " << r3 << endl;
+	cout << "r4 = " << r4 << endl;
+
+	int i = 0;
+	int randNumLoop;
+	while (i < 5)
+	{
+		randNumLoop = rand();
+		cout << "Looping Num " << i << " = " << randNumLoop << endl;
+		++i;
+	}
+
+    return 0;
+}
+
