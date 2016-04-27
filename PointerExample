@@ -1,0 +1,29 @@
+// Pointer Example program
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+  bool boolVar = true;
+  int intVar = 50;
+  float floatVar = 3.14f;
+  
+  //Initialise pointer to the addressses of the corresponding variables.
+  bool* boolPtr = &boolVar;
+  int* intPtr = &intVar;
+  float* floatPtr = &floatVar;
+  
+  //Pritn normal variable values
+  cout<< "boolVar  = " << boolVar << endl;
+  cout<< "intlVar  = " << intVar << endl;
+  cout<< "floatVar = " << floatVar << endl;
+  
+  cout<< endl;
+  
+  //Print the addresses the pointers store
+  cout<< "boolPtr  = Address of boolVar  = " << boolPtr << endl;
+  cout<< "intPtr   = Address of intVar  = " << intPtr << endl;
+  cout<< "floatPtr = Address of floatVar  = " << floatPtr << endl;
+  
+}
